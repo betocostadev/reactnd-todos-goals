@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+# React Nanodegree - Todos and Goals App
+
+This app was created based on React Nanodegree by Udacity.
+This is a conversion of the same app that was built using vanilla JS. It is [available here](https://github.com/betocostadev/reactnd-redux-todos-goals)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

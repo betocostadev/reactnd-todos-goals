@@ -25,7 +25,7 @@ function toggleTodo (id) {
   }
 }
 
-function handleAddTodo(name, cb) {
+export function handleAddTodo(name, cb) {
   return (dispatch) => {
     return API.saveTodo(name)
       .then((todo) => {
@@ -38,7 +38,7 @@ function handleAddTodo(name, cb) {
   }
 }
 
-function handleDeleteTodo(todo) {
+export function handleDeleteTodo(todo) {
   return (dispatch) => {
     dispatch(removeTodo(todo.id))
 
@@ -50,7 +50,7 @@ function handleDeleteTodo(todo) {
   }
 }
 
-function handleToggleTodo(id) {
+export function handleToggleTodo(id) {
   return (dispatch) => {
     dispatch(toggleTodo(id))
     
@@ -61,7 +61,3 @@ function handleToggleTodo(id) {
       })
   }
 }
-
-const todosActions = { handleAddTodo, handleDeleteTodo, handleToggleTodo }
-
-export default todosActions

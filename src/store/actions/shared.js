@@ -9,7 +9,7 @@ function receiveData (todos, goals) {
   }
 }
 
-function handleInitialData() {
+export function handleInitialData() {
   return (dispatch) => {
     return Promise.all([
         API.fetchTodos(),
@@ -21,5 +21,3 @@ function handleInitialData() {
       })
   }
 }
-
-const sharedActions = { handleInitialData }

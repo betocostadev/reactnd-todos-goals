@@ -17,7 +17,7 @@ function removeGoal (id) {
   }
 }
 
-function handleAddGoal(name, cb) {
+export function handleAddGoal(name, cb) {
   return async (dispatch) => {
     try {
       const goal = await API.saveGoal(name)
@@ -29,7 +29,7 @@ function handleAddGoal(name, cb) {
   }
 }
 
-function handleDeleteGoal(goal) {
+export function handleDeleteGoal(goal) {
   return (dispatch) => {
     dispatch(removeGoal(goal.id))
 
@@ -40,7 +40,3 @@ function handleDeleteGoal(goal) {
       })
   }
 }
-
-const goalsActions = { handleAddGoal, handleDeleteGoal }
-
-export default goalsActions
